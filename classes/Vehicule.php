@@ -1,7 +1,9 @@
 <?php
 
-class Vehicule
+abstract class Vehicule
 {
+   public const TVA = 20;
+
    protected int $masse;
    protected float $vitesse = 0;
    protected int  $capacite;

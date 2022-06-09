@@ -1,10 +1,7 @@
 <?php
-class Voiture{
-    public string $couleur;
-    public int $masse;
-    private string $marque;
-    private float $vitesse=0;
-
+class Voiture extends Vehicule{
+    private string $couleur;
+    
     public function __construct(string $color,int $mass,string $brand)
     {
         $this->couleur = $color;
@@ -27,6 +24,10 @@ class Voiture{
     public function afficherEnergieCinetique():float
     {
         return 0.5 * $this->masse * ($this->vitesse**2);
+    }
+    public static function test()
+    {
+        echo "test test test";
     }
     public function __destruct()
     {
