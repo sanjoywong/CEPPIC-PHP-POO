@@ -2,8 +2,24 @@
 class Voiture{
     public string $couleur;
     public int $masse;
-    public $marque;
-    public $vitesse=0;
+    private string $marque;
+    private float $vitesse=0;
+
+    public function __construct(string $color,int $mass,string $brand)
+    {
+        $this->couleur = $color;
+        $this->masse = $mass;
+        $this->marque = $brand;
+    }
+    public function getCouleur():string
+    {
+        return $this->couleur;
+    }
+
+    public function setCouleur(string $color):string
+    {
+        return $this->couleur = $color;
+    }
 
     public function afficherMessage(){
         echo "la voiture";
@@ -12,6 +28,11 @@ class Voiture{
     {
         return 0.5 * $this->masse * ($this->vitesse**2);
     }
+    public function __destruct()
+    {
+        echo "<p> Object destroyed </p>";
+    }
 }
+
 
 ?>
