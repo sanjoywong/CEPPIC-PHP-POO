@@ -1,24 +1,12 @@
 <?php
-class Voiture{
-    public $couleur;
-    public $masse;
-    public $marque;
-    public $vitesse=0;
 
-    public function afficherMessage(){
-        echo "la voiture";
-    }
-    public function afficherVitesse(): float
-    {
-        return 0.5 * $this->masse * ($this->vitesse**2);
-    }
-}
+require_once './classes/Voiture.php';
 
 $voiture1 = new Voiture();
 $voiture1->couleur = "rouge";
 $voiture1->masse = 1200;
 $voiture1->vitesse = 30;
-echo $voiture1->afficherVitesse();
+echo $voiture1->afficherEnergieCinetique();
 
 $voiture2 = new Voiture();
 $voiture2->couleur = "verte";
