@@ -11,6 +11,7 @@ $voiture1 = new Voiture("vert",1195,"renault");
 $voiture1->masse = 1200;
 //$voiture1->vitesse = 30;
 
+
 $voiture1->setCouleur("noir");
 
 echo $voiture1->getCouleur()."<br/>";
